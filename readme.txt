@@ -2,7 +2,7 @@
 Contributors: beckin
 Donate link: https://www.buymeacoffee.com/beckin
 Tags: ga4, google analytics 4, google tag manager, analytics, tracking
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 8.0
@@ -81,6 +81,10 @@ Yes. The plugin uses the standard WordPress enqueue system, which works well wit
 No. Beckin Google Injector only injects tracking scripts. It does not add visible elements to your site’s front end.
 
 == Changelog ==
+
+= 1.0.6 =
+* Removed the `.gitignore` file from the distributed plugin so hidden files are not shipped.
+* Added a `languages` directory with a placeholder index file to match the plugin header `Domain Path` and satisfy Plugin Check.
 
 = 1.0.5 =
 * Removed `.gitignore` from the distributed plugin so hidden files are not shipped.

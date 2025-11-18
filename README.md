@@ -59,6 +59,11 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 ### Changelog
 
+#### 1.0.6
+
+- Removed the `.gitignore` file from the distributed plugin so hidden files are not shipped.
+- Added a `languages` directory with a placeholder index file to match the plugin header `Domain Path` and satisfy Plugin Check.
+
 #### 1.0.5
 
 - Removed `.gitignore` from the distributed plugin so hidden files are not shipped.
