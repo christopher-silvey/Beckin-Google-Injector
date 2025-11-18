@@ -59,6 +59,12 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 ### Changelog
 
+#### 1.0.5
+
+- Removed `.gitignore` from the distributed plugin so hidden files are not shipped.
+- Fixed the plugin header "Domain Path" warning by ensuring the `languages` directory exists and matches the header value.
+- Reduced the readme tag list to 5 tags to satisfy the WordPress readme parser and Plugin Check.
+
 #### 1.0.4
 
 - Ran phpcbf with the WordPress coding standard across all plugin files to normalize formatting, spacing, and docblocks.
@@ -78,7 +84,7 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 #### 1.0.1
 
-- Updated logged in tracking logic to treat “staff” as any user who can edit posts (administrators, editors, authors, contributors) and exclude them from tracking by default.
+- Updated logged in tracking logic to treat "staff" as any user who can edit posts (administrators, editors, authors, contributors) and exclude them from tracking by default.
 - Renamed the setting label and help text to talk about logged in staff instead of only administrators.
 - Updated README wording to reflect the staff behavior and clarify recommended settings.
 
