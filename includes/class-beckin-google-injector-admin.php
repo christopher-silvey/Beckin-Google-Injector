@@ -70,7 +70,7 @@ class Beckin_Google_Injector_Admin {
 				'default'           => array(
 					'measurement_id' => '',
 					'container_id'   => '',
-					'load_for_admin' => false,
+					'load_for_staff' => false,
 					'placement'      => 'head',
 				),
 			)
@@ -100,9 +100,9 @@ class Beckin_Google_Injector_Admin {
 		);
 
 		add_settings_field(
-			'beckin_google_injector_load_for_admin',
+			'beckin_google_injector_load_for_staff',
 			esc_html__( 'Script Loading', 'beckin-google-injector' ),
-			array( __CLASS__, 'field_load_for_admin' ),
+			array( __CLASS__, 'field_load_for_staff' ),
 			self::$page_slug,
 			'beckin_google_injector_main'
 		);
@@ -190,31 +190,38 @@ class Beckin_Google_Injector_Admin {
 	 *
 	 * @return void
 	 */
-	public static function field_load_for_admin(): void {
+	public static function field_load_for_staff(): void {
 		$options = self::get_options();
 
-		$load_for_admin = false;
-		if ( isset( $options['load_for_admin'] ) ) {
-			$load_for_admin = (bool) $options['load_for_admin'];
+		$load_for_staff = false;
+		if ( isset( $options['load_for_staff'] ) ) {
+			$load_for_staff = (bool) $options['load_for_staff'];
 		}
 
-		$current_value = $load_for_admin ? 'yes' : 'no';
+		$current_value = $load_for_staff ? 'yes' : 'no';
 		?>
 		<select
-			id="beckin_google_injector_load_for_admin"
-			name="<?php echo esc_attr( BECKIN_GOOGLE_INJECTOR_OPTION_KEY ); ?>[load_for_admin]"
+			id="beckin_google_injector_load_for_staff"
+			name="<?php echo esc_attr( BECKIN_GOOGLE_INJECTOR_OPTION_KEY ); ?>[load_for_staff]"
 		>
 			<option value="no" <?php selected( $current_value, 'no' ); ?>>
-				<?php esc_html_e( 'Do not load for admins (recommended)', 'beckin-google-injector' ); ?>
+				<?php esc_html_e( 'Do not load for logged in staff (recommended)', 'beckin-google-injector' ); ?>
 			</option>
 			<option value="yes" <?php selected( $current_value, 'yes' ); ?>>
-				<?php esc_html_e( 'Load for admins', 'beckin-google-injector' ); ?>
+				<?php esc_html_e( 'Load for logged in staff', 'beckin-google-injector' ); ?>
 			</option>
 		</select>
 		<p class="description">
 			<?php
 			esc_html_e(
-				'This setting stops GA4 and GTM from firing when you\'re logged in, ensuring your own visits don\'t skew your events.',
+				'Staff users who work on the site usually do not behave like normal visitors.',
+				'beckin-google-injector'
+			);
+            ?>
+            <br>
+            <?php
+			esc_html_e(
+				'Excluding them keeps your analytics & event reporting cleaner. e.g. admins, editors, authors, contributors',
 				'beckin-google-injector'
 			);
 			?>
@@ -272,7 +279,7 @@ class Beckin_Google_Injector_Admin {
 		$defaults = array(
 			'measurement_id' => '',
 			'container_id'   => '',
-			'load_for_admin' => false,
+			'load_for_staff' => false,
 			'placement'      => 'head',
 		);
 
@@ -295,7 +302,7 @@ class Beckin_Google_Injector_Admin {
 		$clean = array(
 			'measurement_id' => '',
 			'container_id'   => '',
-			'load_for_admin' => false,
+			'load_for_staff' => false,
 			'placement'      => 'head',
 		);
 
@@ -340,13 +347,13 @@ class Beckin_Google_Injector_Admin {
 		}
 
 		// Admin loading.
-		if ( isset( $input['load_for_admin'] ) ) {
-			$value = (string) $input['load_for_admin'];
+		if ( isset( $input['load_for_staff'] ) ) {
+			$value = (string) $input['load_for_staff'];
 
 			if ( 'yes' === $value ) {
-				$clean['load_for_admin'] = true;
+				$clean['load_for_staff'] = true;
 			} else {
-				$clean['load_for_admin'] = false;
+				$clean['load_for_staff'] = false;
 			}
 		}
 

@@ -51,10 +51,11 @@ class Beckin_Google_Injector_Frontend {
 			return;
 		}
 
-		$load_for_admin = ! empty( $options['load_for_admin'] );
+        $load_for_staff = ! empty( $options['load_for_staff'] );
 
-		if ( ! $load_for_admin && is_user_logged_in() && current_user_can( 'manage_options' ) ) {
-			// Admin tracking is disabled and user is an admin.
+        if ( ! $load_for_staff && is_user_logged_in() && current_user_can( 'edit_posts' ) ) {
+            // Staff tracking is disabled and user can edit posts
+            // (contributors, authors, editors, administrators).
 			return;
 		}
 
@@ -109,10 +110,11 @@ class Beckin_Google_Injector_Frontend {
 			return;
 		}
 
-		$load_for_admin = ! empty( $options['load_for_admin'] );
+        $load_for_staff = ! empty( $options['load_for_staff'] );
 
-		if ( ! $load_for_admin && is_user_logged_in() && current_user_can( 'manage_options' ) ) {
-			// Admin tracking is disabled and user is an admin.
+        if ( ! $load_for_staff && is_user_logged_in() && current_user_can( 'edit_posts' ) ) {
+            // Staff tracking is disabled and user can edit posts
+            // (contributors, authors, editors, administrators).
 			return;
 		}
 
@@ -149,7 +151,7 @@ class Beckin_Google_Injector_Frontend {
 		$defaults = array(
 			'measurement_id' => '',
 			'container_id'   => '',
-			'load_for_admin' => false,
+			'load_for_staff' => false,
 			'placement'      => 'head',
 		);
 
