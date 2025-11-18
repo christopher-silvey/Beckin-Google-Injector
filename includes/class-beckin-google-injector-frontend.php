@@ -194,7 +194,9 @@ class Beckin_Google_Injector_Frontend {
 
         $src = 'https://www.googletagmanager.com/ns.html?id=' . rawurlencode( $container_id );
 
-        echo '<noscript><iframe src="' . esc_url( $src ) . '" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>';
+        echo "<!-- Google Tag Manager (noscript) -->\n";
+        echo '<noscript><iframe src="' . esc_url( $src ) . '" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>' . "\n";
+        echo '<!-- End Google Tag Manager (noscript) -->';
     }
 
     /**
@@ -205,9 +207,22 @@ class Beckin_Google_Injector_Frontend {
      * @return string
      */
     public static function add_async_attribute( string $tag, string $handle ): string {
-        if ( 'beckin-google-injector-gtag' === $handle || 'beckin-google-injector-gtm' === $handle ) {
+        $handles = array(
+            'beckin-google-injector-gtag',
+            'beckin-google-injector-gtm',
+        );
+
+        if ( in_array( $handle, $handles, true ) ) {
             if ( false === strpos( $tag, ' async' ) ) {
                 $tag = str_replace( '<script ', '<script async ', $tag );
+            }
+
+            if ( 'beckin-google-injector-gtag' === $handle ) {
+                // Match the GA4 docs comment.
+                $tag = "<!-- Google tag (gtag.js) -->\n" . $tag . "<!-- End Google tag (gtag.js) -->\n";
+            } elseif ( 'beckin-google-injector-gtm' === $handle ) {
+                // Match the GTM docs comments around the loader.
+                $tag = "<!-- Google Tag Manager -->\n" . $tag . "<!-- End Google Tag Manager -->\n";
             }
         }
 

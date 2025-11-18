@@ -59,6 +59,11 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 ### Changelog
 
+#### 1.0.3
+
+- Aligned GA4 and GTM markup with Google’s official install snippets by adding the standard `<!-- Google tag (gtag.js) -->` comment and wrapping the GTM loader script with `<!-- Google Tag Manager -->` comments.
+- Wrapped the GTM `<noscript>` iframe with matching `<!-- Google Tag Manager (noscript) -->` comments for clarity. No functional tracking changes, just cleaner, more familiar markup.
+
 #### 1.0.2
 
 - Updated GTM implementation to bootstrap dataLayer and push the standard gtm.js event before the GTM script runs.

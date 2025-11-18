@@ -2,7 +2,7 @@
 Contributors: beckin
 Donate link: https://www.buymeacoffee.com/beckin
 Tags: ga4, google analytics 4, google tag manager, gtm, analytics, tracking
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 8.0
@@ -81,6 +81,10 @@ Yes. The plugin uses the standard WordPress enqueue system, which works well wit
 No. Beckin Google Injector only injects tracking scripts. It does not add visible elements to your site’s front end.
 
 == Changelog ==
+
+= 1.0.3 =
+* Aligned GA4 and GTM markup with Google’s official install snippets by adding the standard <!-- Google tag (gtag.js) --> comment and wrapping the GTM loader script with <!-- Google Tag Manager --> comments.
+* Wrapped the GTM <noscript> iframe with matching <!-- Google Tag Manager (noscript) --> comments for clarity. No functional tracking changes, just cleaner, more familiar markup.
 
 = 1.0.2 =
 * Updated GTM implementation to bootstrap dataLayer and push the standard gtm.js event before the GTM script runs.
