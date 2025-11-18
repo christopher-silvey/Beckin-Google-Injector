@@ -217,9 +217,9 @@ class Beckin_Google_Injector_Admin {
 				'Staff users who work on the site usually do not behave like normal visitors.',
 				'beckin-google-injector'
 			);
-            ?>
-            <br>
-            <?php
+			?>
+			<br>
+			<?php
 			esc_html_e(
 				'Excluding them keeps your analytics & event reporting cleaner. e.g. admins, editors, authors, contributors',
 				'beckin-google-injector'

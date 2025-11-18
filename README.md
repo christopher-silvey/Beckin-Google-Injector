@@ -59,6 +59,11 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 ### Changelog
 
+#### 1.0.4
+
+- Ran phpcbf with the WordPress coding standard across all plugin files to normalize formatting, spacing, and docblocks.
+- No functional changes in this release. This is a housekeeping update to keep the codebase aligned with WordPress coding standards.
+
 #### 1.0.3
 
 - Aligned GA4 and GTM markup with Google’s official install snippets by adding the standard `<!-- Google tag (gtag.js) -->` comment and wrapping the GTM loader script with `<!-- Google Tag Manager -->` comments.
