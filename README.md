@@ -59,6 +59,13 @@ This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-u
 
 ### Changelog
 
+#### 1.0.2
+
+- Updated GTM implementation to bootstrap dataLayer and push the standard gtm.js event before the GTM script runs.
+- Added a GTM noscript iframe via wp_body_open so a basic container still fires when JavaScript is disabled.
+- Centralized async handling for GA4 and GTM scripts using the script_loader_tag filter so both tags consistently load with the async attribute.
+- Kept GTM staff checks and options lookup aligned with the GA4 logic so behavior stays consistent and easier to maintain.
+
 #### 1.0.1
 
 - Updated logged in tracking logic to treat “staff” as any user who can edit posts (administrators, editors, authors, contributors) and exclude them from tracking by default.
