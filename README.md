@@ -2,6 +2,7 @@
 
 Beckin Google Injector is a lightweight WordPress plugin that adds Google Analytics 4 and Google Tag Manager to your site with a simple settings screen. Enter your GA4 Measurement ID and/or your GTM Container ID, choose whether to load scripts for logged in staff, and pick header or footer placement.
 
+
 ### Features
 
 - Simple settings page under **Settings → Beckin Google Injector**
@@ -14,10 +15,12 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 - Self hosted automatic updates powered by GitHub and Plugin Update Checker
 - Safety notice when both GA4 and GTM are configured, reminding you not to also fire GA4 as a GTM tag with the same Measurement ID to avoid double counting
 
+
 ### Requirements
 
 - WordPress 6.8 or higher
 - PHP 8.0 or higher
+
 
 ### Installation
 
@@ -30,6 +33,7 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 5. Click **Install Now**.
 6. When the installation completes, click **Activate Plugin**.
 
+
 #### Manual installation
 
 1. Download the plugin.
@@ -37,6 +41,7 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 3. Upload the `beckin-google-injector` folder into your `wp-content/plugins` directory.
 4. In the WordPress admin, go to **Plugins → Installed Plugins**.
 5. Activate **Beckin Google Injector**.
+
 
 ### Configuration
 
@@ -51,14 +56,22 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 
 Once saved, the plugin will start loading GA4 and/or GTM on the frontend according to your settings. If you configure both GA4 and GTM, make sure you do not also fire GA4 as a tag inside GTM with the same Measurement ID, or your pageviews and events may be double counted.
 
+
 ### Automatic Updates
 
 This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) and a GitHub repository for self hosted updates.
 
 - Repository URL: `https://github.com/christopher-silvey/Beckin-Google-Injector`
 
-### Automatic Updates
 
+### Support This Project
+
+If this plugin saves you time or helps you ship cleaner analytics & tracking for clients, you can support ongoing development in a few quick ways:
+
+- [Sponsor my work on GitHub](https://github.com/sponsors/christopher-silvey)
+- [Buy me a coffee](https://buymeacoffee.com/beckin)
+- ⭐ Star this repository to help others discover it
+- 👀 Watch this repository to get notified about new releases and improvements
 
 
 ### Changelog
