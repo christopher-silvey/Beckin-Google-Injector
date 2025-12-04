@@ -2,7 +2,7 @@
 Contributors: beckin
 Donate link: https://www.buymeacoffee.com/beckin
 Tags: ga4, google analytics 4, google tag manager, analytics, tracking
-Stable tag: 1.0.6
+Stable tag: 1.1.0
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 8.0
@@ -25,7 +25,7 @@ You can enter a GA4 Measurement ID and/or a GTM Container ID, control whether sc
 4. **Logged in staff exclusion** – Optionally skip loading GA4 and GTM for logged in staff so administrators, editors, authors, and contributors do not skew your analytics.
 5. **Header or footer placement** – Choose whether scripts load in the header (recommended for accuracy) or footer.
 6. **Cache friendly** – Uses `wp_enqueue_script` and `wp_add_inline_script` so it integrates cleanly with caching and optimization plugins.
-7. **Self hosted automatic updates** – Uses Plugin Update Checker and a Bitbucket repository for self hosted updates.
+7. **Self hosted automatic updates** – Uses Plugin Update Checker and a GitHub repository for self hosted updates.
 8. **Secure and lightweight** – No front end UI, no bloat, and all options are sanitized and escaped following WordPress coding standards.
 
 If this plugin saves you time or helps you ship cleaner analytics for your clients, please consider supporting development by [buying me a coffee](https://www.buymeacoffee.com/beckin).
@@ -81,6 +81,10 @@ Yes. The plugin uses the standard WordPress enqueue system, which works well wit
 No. Beckin Google Injector only injects tracking scripts. It does not add visible elements to your site’s front end.
 
 == Changelog ==
+
+= 1.1.0 =
+* Switched Plugin Update Checker to use the new GitHub repository instead of Bitbucket.
+* Updated the Automatic Updates documentation to reference the GitHub repo for self hosted updates.
 
 = 1.0.6 =
 * Removed the `.gitignore` file from the distributed plugin so hidden files are not shipped.

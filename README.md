@@ -11,7 +11,7 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 - Option to load or skip scripts for logged in staff (administrators, editors, authors, contributors) (recommended: skip)
 - Script placement control, header or footer (header is recommended for accuracy)
 - Uses `wp_enqueue_script` and `wp_add_inline_script` so it plays nicely with caching and optimization plugins
-- Self hosted automatic updates powered by Bitbucket and Plugin Update Checker
+- Self hosted automatic updates powered by GitHub and Plugin Update Checker
 - Safety notice when both GA4 and GTM are configured, reminding you not to also fire GA4 as a GTM tag with the same Measurement ID to avoid double counting
 
 ### Requirements
@@ -53,11 +53,20 @@ Once saved, the plugin will start loading GA4 and/or GTM on the frontend accordi
 
 ### Automatic Updates
 
-This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) and a Bitbucket repository for self hosted updates.
+This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) and a GitHub repository for self hosted updates.
 
-- Repository URL: `https://bitbucket.org/chrissilvey/beckin-google-injector/`
+- Repository URL: `https://github.com/christopher-silvey/Beckin-Google-Injector`
+
+### Automatic Updates
+
+
 
 ### Changelog
+
+#### 1.1.0
+
+- Switched Plugin Update Checker to use the new GitHub repository instead of Bitbucket.
+- Updated the Automatic Updates documentation to reference the GitHub repo for self hosted updates.
 
 #### 1.0.6
 
