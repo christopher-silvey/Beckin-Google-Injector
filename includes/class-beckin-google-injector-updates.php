@@ -57,7 +57,7 @@ class Beckin_Google_Injector_Updates {
 		 * Bitbucket example from the PUC readme:
 		 * https://bitbucket.org/user-name/repo-name
 		 */
-		$repo_url = 'https://github.com/christopher-silvey/Beckin-Google-Injector';
+		$repo_url = 'https://github.com/christopher-silvey/beckin-google-injector';
 
 		$update_checker = PucFactory::buildUpdateChecker(
 			$repo_url,

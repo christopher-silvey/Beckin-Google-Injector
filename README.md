@@ -1,3 +1,13 @@
+### Download
+
+Always download the plugin from the **Releases** page, not from the green "Code" button.
+
+- Latest version:  
+  [Download beckin-google-injector.zip](https://github.com/christopher-silvey/beckin-google-injector/releases/latest/download/beckin-google-injector.zip)
+
+The auto generated "Source code" zips (`beckin-google-injector-main.zip`, etc.) are for developers and are **not** in the correct naming format for WordPress installation.
+
+
 # Beckin Google Injector
 
 Beckin Google Injector is a lightweight WordPress plugin that adds Google Analytics 4 and Google Tag Manager to your site with a simple settings screen. Enter your GA4 Measurement ID and/or your GTM Container ID, choose whether to load scripts for logged in staff, and pick header or footer placement.
@@ -26,21 +36,23 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 
 #### Automatic installation (uploading the ZIP)
 
-1. Log into your WordPress admin.
-2. Click **Plugins → Add New**.
-3. Click the **Upload Plugin** button at the top.
-4. Click **Choose File** and select the `beckin-google-injector.zip` file you received.
-5. Click **Install Now**.
-6. When the installation completes, click **Activate Plugin**.
-
+1. Download the latest `beckin-google-injector.zip` from the **Releases** page (or the link above).
+2. Log into your WordPress admin.
+3. Click **Plugins → Add New**.
+4. Click the **Upload Plugin** button at the top.
+5. Click **Choose File** and select the `beckin-google-injector.zip` file.
+6. Click **Install Now**.
+7. When the installation completes, click **Activate Plugin**.
 
 #### Manual installation
 
-1. Download the plugin.
+1. Download the latest `beckin-google-injector.zip` from the **Releases** page (or the link above).
 2. Extract the contents of the zip file.
 3. Upload the `beckin-google-injector` folder into your `wp-content/plugins` directory.
 4. In the WordPress admin, go to **Plugins → Installed Plugins**.
 5. Activate **Beckin Google Injector**.
+
+> Tip: Do not use the auto generated "Source code" downloaded from the green "Code" button. Always use `beckin-google-injector.zip` from Releases, not `beckin-google-injector-main.zip`, so the folder name matches the plugin slug.
 
 
 ### Configuration
@@ -61,7 +73,7 @@ Once saved, the plugin will start loading GA4 and/or GTM on the frontend accordi
 
 This plugin uses [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) and a GitHub repository for self hosted updates.
 
-- Repository URL: `https://github.com/christopher-silvey/Beckin-Google-Injector`
+- Repository URL: `https://github.com/christopher-silvey/beckin-google-injector`
 
 
 ### Support This Project
@@ -75,6 +87,11 @@ If this plugin saves you time or helps you ship cleaner analytics & tracking for
 
 
 ### Changelog
+
+#### 1.1.1
+
+- Fine tuned the Plugin Update Checker configuration so it lines up cleanly with the new GitHub repository and tagged releases.
+- Updated the Automatic Updates and installation documentation to make the GitHub download and install flow clearer.
 
 #### 1.1.0
 
