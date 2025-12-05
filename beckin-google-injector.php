@@ -3,9 +3,9 @@
  * Plugin Name:       Beckin Google Injector
  * Description:       Adds Google Analytics 4 and Google Tag Manager with simple controls for admin exclusion and header or footer placement.
  * Text Domain:       beckin-google-injector
- * Version: 1.1.1
+ * Version: 1.1.2
  * Requires at least: 6.8
- * Tested up to: 6.8
+ * Tested up to: 6.9
  * Requires PHP: 8.0
  * Author: Beckin - Christopher Silvey
  * Author URI: https://www.beckin.com
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Core constants */
 if ( ! defined( 'BECKIN_GOOGLE_INJECTOR_VERSION' ) ) {
-	define( 'BECKIN_GOOGLE_INJECTOR_VERSION', '1.1.1' );
+	define( 'BECKIN_GOOGLE_INJECTOR_VERSION', '1.1.2' );
 }
 
 if ( ! defined( 'BECKIN_GOOGLE_INJECTOR_PLUGIN_FILE' ) ) {

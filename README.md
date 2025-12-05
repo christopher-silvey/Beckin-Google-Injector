@@ -1,6 +1,6 @@
 ### Download
 
-Always download the plugin from the **Releases** page, not from the green "Code" button.
+Always download the plugin from the **Releases** page, not from the "Code" button.
 
 - Latest version:  
   [Download beckin-google-injector.zip](https://github.com/christopher-silvey/beckin-google-injector/releases/latest/download/beckin-google-injector.zip)
@@ -34,6 +34,13 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 
 ### Installation
 
+> Tip: Do not use the auto generated "Source code" downloads or the downloaded zip file from the "Code" button. Always use `beckin-google-injector.zip` from Releases, not `beckin-google-injector-main.zip, etc`, so the plugin folder name properly matches the plugin slug. i.e. `beckin-google-injector.zip`
+
+<p align="center">
+	<img src="docs/images/Screenshot-1.png" alt="Do not use Code button ZIP" width="360" />
+	<img src="docs/images/Screenshot-2.png" alt="Correct ZIP from Releases" width="360" />
+</p>
+
 #### Automatic installation (uploading the ZIP)
 
 1. Download the latest `beckin-google-injector.zip` from the **Releases** page (or the link above).
@@ -51,8 +58,6 @@ Beckin Google Injector is a lightweight WordPress plugin that adds Google Analyt
 3. Upload the `beckin-google-injector` folder into your `wp-content/plugins` directory.
 4. In the WordPress admin, go to **Plugins → Installed Plugins**.
 5. Activate **Beckin Google Injector**.
-
-> Tip: Do not use the auto generated "Source code" downloaded from the green "Code" button. Always use `beckin-google-injector.zip` from Releases, not `beckin-google-injector-main.zip`, so the folder name matches the plugin slug.
 
 
 ### Configuration
@@ -87,6 +92,12 @@ If this plugin saves you time or helps you ship cleaner analytics & tracking for
 
 
 ### Changelog
+
+#### 1.1.2
+
+- Marked the plugin as compatible with WordPress 6.9.
+- Updated the installation section with a clearer tip and side-by-side screenshots showing the correct ZIP to download from Releases.
+- Added a `docs/images` folder for README screenshots only (no runtime code changes).
 
 #### 1.1.1
 
